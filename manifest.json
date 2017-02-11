@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Focus",
+  "version": "1.0",
+  "default_locale": "en",
+  "description": "Removes distractions on social media sites",
+  "icons": {},
+  "author": "Sahir Vellani",
+
+  "page_action": {
+    "default_locale": {
+      "16": "image"
+    },
+    "default_title": "Focus",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": "false"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["main.js"]
+    }
+  ]
+
+}
