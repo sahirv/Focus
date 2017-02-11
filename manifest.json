@@ -9,7 +9,7 @@
 
   "page_action": {
     "default_locale": {
-      "16": "image"
+      "default": "icon.png"
     },
     "default_title": "Focus",
     "default_popup": "popup.html"
