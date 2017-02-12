@@ -1,10 +1,23 @@
+document.addEventListener('DOMContentLoaded', function(){
+  if (localStorage.focus === 'On') {
+    checkbox.checked = true;
+  }
+  else if (localStorage.focus === 'Off') {
+    checkbox.checked = false;
+  }
+})
+
 var checkbox = document.getElementById('checkbox')
+
 checkbox.addEventListener("change", function(){
   let value = checkbox.checked;
+  console.log(value);
   if (value === true){
-    chrome.tabs.executeScript(null,{file: "on.js"});
+    localStorage.focus = 'On';
+    chrome.tabs.executeScript(null,{file: "ContentScripts/on.js"});
   }
   else {
-    chrome.tabs.executeScript(null,{file: "off.js"});
+    localStorage.focus = 'Off';
+    chrome.tabs.executeScript(null,{file: "ContentScripts/off.js"});
   }
 });
