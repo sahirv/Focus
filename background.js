@@ -10,6 +10,7 @@ chrome.runtime.onInstalled.addListener(function() {
         ],
         // And shows the extension's page action.
         actions: [ new chrome.declarativeContent.ShowPageAction() ]
+        //TODO: if focus is set to on, hide posts on page load
       }
     ]);
   });

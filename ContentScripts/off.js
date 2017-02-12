@@ -1,4 +1,4 @@
-var posts = document.getElementsByClassName('fbUserContent');
-for (let post in posts){
-  posts[post].style.display = 'block';
+var posts = document.querySelectorAll('[data-testid="fbfeed_story"]');
+for (let i = 0; i < posts.length; i++){
+  posts[i].style.display = 'block';
 }

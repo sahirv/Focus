@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function(){
   if (localStorage.focus === 'On') {
     checkbox.checked = true;
+    chrome.tabs.executeScript(null,{file: "ContentScripts/on.js"});
   }
   else if (localStorage.focus === 'Off') {
     checkbox.checked = false;
+    chrome.tabs.executeScript(null,{file: "ContentScripts/off.js"});
   }
 })
 
@@ -20,4 +22,7 @@ checkbox.addEventListener("change", function(){
     localStorage.focus = 'Off';
     chrome.tabs.executeScript(null,{file: "ContentScripts/off.js"});
   }
+  setTimeout(function(){
+    window.close()
+  }, 450);
 });
