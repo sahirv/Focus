@@ -21,9 +21,11 @@
 
   "permissions": [
     "activeTab",
-    "tabs",
     "declarativeContent",
-    "http://www.facebook.com/*"
+    "storage",
+    "tabs",
+    "http://www.facebook.com/*",
+    "https://www.facebook.com/*"
   ]
 
 }
