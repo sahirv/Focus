@@ -1,5 +1,5 @@
 # Focus
 
-A chrome extension that allows you to hide the Facebook News Feed.
+A chrome extension that lets you hide the Facebook News Feed.
 
 ![Screen Shot](Img/ss.png)
