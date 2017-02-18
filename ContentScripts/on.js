@@ -8,6 +8,7 @@ chrome.storage.sync.get('focus', function(item){
   }
 });
 
+//Hides new posts if user scrolls
 var observer = new MutationObserver(function(mutations){
   mutations.forEach(function(mutation){
     chrome.storage.sync.get('focus', function(item){
@@ -22,6 +23,7 @@ var observer = new MutationObserver(function(mutations){
   })
 })
 
+//Checks for changes in DOM
 var body = document.body
 observer.observe(body, {
 	childList: true,

@@ -1,3 +1,4 @@
+//inject content scripts on page load
 document.addEventListener('DOMContentLoaded', function(){
   chrome.storage.sync.get('focus', function(item){
     if (item.focus === 'On'){

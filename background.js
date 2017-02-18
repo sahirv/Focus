@@ -1,3 +1,4 @@
+//Declarative Content rule
 var rule1 = {
   // That fires when on facebook.com ...
   conditions: [
@@ -7,7 +8,6 @@ var rule1 = {
   ],
   // And shows the extension's page action.
   actions: [new chrome.declarativeContent.ShowPageAction()]
-  //TODO: if focus is set to on, hide posts on page load
 };
 
 chrome.runtime.onInstalled.addListener(function() {
@@ -18,6 +18,7 @@ chrome.runtime.onInstalled.addListener(function() {
   });
 });
 
+//Inject On.js on page load
 chrome.tabs.onUpdated.addListener(function() {
   chrome.tabs.executeScript(null, { file: "ContentScripts/on.js" });
 });
