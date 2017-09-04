@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Focus",
-  "version": "1.0",
+  "version": "1.2",
   "description": "Removes distractions on social media sites",
   "icons": {
     "128": "icon.png"
